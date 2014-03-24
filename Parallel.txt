@@ -1,0 +1,8 @@
+Q) What is NUMA?
+A) Answer
+
+Q) What is super linear speedup? How is it achieved?
+A) Answer
+
+Q) What is SPMD (SIMD)? What are some pros and cons?
+A) Answer

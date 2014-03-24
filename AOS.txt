@@ -1,0 +1,8 @@
+Q) What’s a Daemon?
+A) Answer
+
+Q) What are fork() and exec(), what do they do, and how do they differ?
+A) Answer
+
+Q) What comprises a process diagram? Draw a detailed one
+A) Something involving [stack, heap, code fragment, etc.]
