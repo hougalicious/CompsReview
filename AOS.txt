@@ -5,7 +5,8 @@ A)  In multitasking operating systems, a daemon is a program that runs as a back
     Systems often start daemons at boot time - these daemons generally respond to network requests, hardware activity, other programs on the system. Some examples of daemons are  "sshd", the SSH daemon which services incoming SSH connections, and the cron daemon, which executes cron jobs at given time intervals.
 ----------------------------------------------------------------------------
 Q) What are fork() and exec(), what do they do, and how do they differ?
-A) Answer
+A) fork() makes a duplicate of the current process, with its own individual copy of all the original process's resources. The newly created process, referred to as the child, gets a different PID, with the parent's PID as its PPID.  Both processes resume executing the same code at the point after fork() returns - the processes can be differentiated between by storing the return value from fork(), which returns 0 if  you're the child, >0 if you're the parent, and -1 if the fork() call failed.
+// TODO EXEC()
 ----------------------------------------------------------------------------
 Q) What comprises a process diagram? Draw a detailed one
 A) Something involving [stack, heap, code fragment, etc.]
