@@ -1,8 +1,11 @@
-Q) What’s a Daemon?
-A) Answer
-
+Q) What's a daemon?
+A)  In multitasking operating systems, a daemon is a program that runs as a background process (the Windows equivalent is referred to as a "service"). In Unix, they typically end with the character "d".
+    In Unix, the parent of a daemon is usually the process "init".  A system daemon is created when a process forks a child process, then exits, leaving the child process to be adopted by init - that is to say, the child process is intentionally orphaned.  In addition, the daemon process must be detached from any terminal.
+    Daemons differ from zombie processes in that daemons are still executing and their original parent has died; zombies have their original parent process, and have finished execution, but the parent has not reaped the child by calling wait() - the zombie's memory and resources have been deallocated, but its PID in the process table still exists.
+    Systems often start daemons at boot time - these daemons generally respond to network requests, hardware activity, other programs on the system. Some examples of daemons are  "sshd", the SSH daemon which services incoming SSH connections, and the cron daemon, which executes cron jobs at given time intervals.
+----------------------------------------------------------------------------
 Q) What are fork() and exec(), what do they do, and how do they differ?
 A) Answer
-
+----------------------------------------------------------------------------
 Q) What comprises a process diagram? Draw a detailed one
 A) Something involving [stack, heap, code fragment, etc.]
