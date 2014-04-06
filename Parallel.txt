@@ -1,7 +1,17 @@
-Q) What is NUMA?
-A) Answer
+Q) What is NUMA? What are its pros and cons?
+A) NUMA stands for "non-uniform memory access" - it is a shared memory design used in multiprocessing in which memory access time depends on the memory location relative the processor.  A processor can access its own local memory faster than non-local memory (memory local to another processor, or memory shared between processors).
+Pros of NUMA:
+// TODO: MORE
+
 
 Q) What is super linear speedup? How is it achieved?
+A) A program's speedup is defined as (sequential run time) / (parallel run time). If a process runs P times faster when using P processors compared to using 1, its speedup is said to be linear.  When a process runs more than P times faster when using P processors compared to 1, the speedup is said to be super linear.
+One way for a program to achieve super linear speedup is keep as much of its critical data as possible cached. Each processor has its own cache, and can store more of the working set in cache; in this way, the program's memory access time can be reduced, providing significant extra speedup.  Another way to achieve super linear speedup would be to distribute work involving a huge data set stored on disk across several machines; this reduces the time required to move data from disk into ram.  Essentially, storing more data in a faster type of storage (ram vs cache, disk vs ram, etc.) at the same time can increase speedup from linear to super linear.
+
+Q) What are the major differences between heavyweight and lightweight processes?
+A) Answer
+
+Q) Explain the concept of collective operations - use bcast as an example.
 A) Answer
 
 Q) What is SPMD (SIMD)? What are some pros and cons?
